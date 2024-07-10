@@ -1,0 +1,22 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Product;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // User::factory(10)->create();
+
+        Product::updateOrCreate(['id' => 1, 'name' => '測試商品1', 'price' => 200]);
+        Product::updateOrCreate(['id' => 2, 'name' => '測試商品2', 'price' => 500]);
+    }
+}
